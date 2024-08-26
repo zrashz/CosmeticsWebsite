@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+    <h1>Your Shopping Cart</h1>
+    <div id="cartItems"></div>
+    <button id="clearCart">Clear Cart</button>
+
+    <div class="payment-section">
+        <button id="proceedToPayment">Proceed to Payment</button>
+    </div>
+
+    <script>
+        // Function to display cart items
+        function displayCartItems() {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let cartContainer = document.getElementById('cartItems');
+            cartContainer.innerHTML = '';
+
+            if (cartItems.length === 0) {
+                cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+                return;
+            }
+
+            cartItems.forEach((item, index) => {
+                let itemRow = document.createElement('div');
+                itemRow.classList.add('cart-item');
+
+                itemRow.innerHTML = `
+                    <img src="${item.image}" alt="${item.product}" style="width:100px;height:auto;">
+                    <p><strong>${item.product}</strong></p>
+                    <p>Price: Rs${item.price}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                    <button onclick="removeCartItem(${index})">Remove Item</button>
+                `;
+
+                cartContainer.appendChild(itemRow);
+            });
+        }
+
+        // Function to remove a cart item
+        function removeCartItem(index) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            displayCartItems();
+        }
+
+        // Function to clear the entire cart
+        document.getElementById('clearCart').onclick = function() {
+            localStorage.removeItem('cartItems');
+            displayCartItems();
+        }
+
+        // Display the cart items on page load
+        displayCartItems();
+    </script>
+<script>
+    // Function to handle the "Proceed to Payment" button click
+    document.getElementById('proceedToPayment').onclick = function() {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        if (cartItems.length === 0) {
+            alert("Your cart is empty. Please add items to your cart before proceeding to payment.");
+        } else {
+            // Here you would typically redirect to a payment page or trigger the payment process
+            window.location.href = 'payment.html'; // Redirect to payment.html page
+        }
+    }
+</script>
+</body>
+</html>

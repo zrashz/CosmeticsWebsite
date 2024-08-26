@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiant Naturals</title>
+    <link rel="shortcut icon" type="image" href="./image/logo2.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+</head>
+<body>
+
+    <!-- top navbar -->
+    <div class="top-navbar">
+        <div class="top-icons">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="other-links">
+            <button id="btn-login"><a href="login.html">Login</a></button>
+            <button id="btn-signup"><a href="signup.html">Sign up</a></button>
+            <button id="btn-signup"><a href="cart.html">Cart</a></button>
+
+            <i class="fa-solid fa-user"></i>
+            
+            
+        </div>
+    </div>
+    <!-- top navbar -->
+
+    <div class="home-section">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="./image/logo..png" alt="" width="180px"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-bars" style="color: white;"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="clothe.html">Cosmetics</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Category
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1c1c50;">
+                      <li><a class="dropdown-item" href="#">Skincare</a></li>
+                      <li><a class="dropdown-item" href="#">Haircare</a></li>
+                      <li><a class="dropdown-item" href="#">Fragrance</a></li>
+                      <li><a class="dropdown-item" href="#">Bath & Body</a></li>
+                      <li><a class="dropdown-item" href="#">Tools & Accessories</a></li>
+                      <li><a class="dropdown-item" href="#">Makeup</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+               
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <!-- navbar -->
+
+
+
+
+
+        <!-- home content -->
+        <section class="home">
+            <div class="content">
+                <h3>Radiant Naturals
+                    <br> <span>Up To 50% Off</span>
+                </h3>
+                <p>Empower Your Natural Beauty with Cruelty-Free, Vegan Cosmetics</p>
+                <button id="shopnow">Shop Now</button>
+            </div>
+            <div class="img">
+                <img src="./image/1.avif" alt="">
+            </div>
+        </section>
+        <!-- home content -->
+    </div>
+
+    <!-- top cards -->
+    <div class="container" id="top-cards">
+        <div class="row">
+            <div class="col-md-5 py-3 py-md-0">
+                <div class="card" style="background-color: #d7c8c826;">
+                    <img src="./image/s1.jpg" alt="">
+                    <div class="card-img-overlay">
+                        <h5 class="card-titel">Skincare</h5>
+                        <p>Limited time only! Hurry in before it's too late!</p>
+                        <p><strong>$200.30 <strike>$250.10</strike></strong></p>
+                        <button onclick="addToCart('SkinCare', 200.30, './image/s1.jpg')">Order Now</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card" style="background-color: #ddd6d626;">
+                    <img src="./image/m1.jfif" alt="">
+                    <div class="card-img-overlay">
+                        <h5 class="card-titel">MakeUp</h5>
+                        <p>Limited time only! Hurry in before it's too late!</p>
+                        <p><strong>$150.10 <strike>$200.10</strike></strong></p>
+                        <button onclick="addToCart('MakeUp', 150.10, './image/m1.jfif')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card" style="background-color: #e8dcdc26;">
+                    <img src="./image/h1.avif" alt="">
+                    <div class="card-img-overlay">
+                        <h5 class="card-titel">Haircare</h5>
+                        <p>Limited time only! Hurry in before it's too late!.</p>
+                        <p><strong>$50.10 <strike>$60</strike></strong></p>
+                        <button onclick="addToCart('Haircare', 50.10, './image/h1.avif')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- top cards -->
+    
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="content">
+            <h1>Get Up To 50% Off</h1>
+            <p>
+                Exclusive Beauty Sale: Up to 50% Off on Your Favorite Cosmetics!</p>
+            <div id="bannerbtn"><button>SHOP NOW</button></div>
+        </div>
+    </div>
+    <!-- banner -->
+
+    <!-- product cards -->
+    <div class="container" id="product-cards">
+        <h1 class="text-center">PRODUCT</h1>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./image/c1.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Perfumes</h3>
+                        <p>Visit us today and start shopping!</p>
+                        <div class="star">
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </div>
+                        <h5>$32.60 <strike>$50</strike> <span></span></h5>
+                        <button onclick="addToCart('Perfumes', 50.10, './image/c1.jpg')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./image/c2.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Cleansers</h3>
+                        <p>Visit us today and start shopping!</p>
+                        <div class="star">
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </div>
+                        <h5>$56.50 <strike>$60</strike> <span></span></h5>
+                        <button onclick="addToCart('Cleansers', 56.50, './image/c2.jpg')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./image/c3.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Body Mists</h3>
+                        <p>Visit us today and start shopping!</p>
+                        <div class="star">
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </div>
+                        <h5>$150.5 <strike>$160.50</strike> <span></span></h5>
+                        <button onclick="addToCart('Body Mists', 150.5, './image/c3.jpg')">Order Now</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./image/c4.webp" alt="">
+                    <div class="card-body">
+                        <h3>Styling Products</h3>
+                        <p>Visit us today and start shopping!</p>
+                        <div class="star">
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </div>
+                        <h5>$50.60 <strike>$56.90</strike> <span></span></h5>
+                        <button onclick="addToCart('Styling Products', 50.60, './image/c4.webp')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./image/c5.webp" alt="">
+                    <div class="card-body">
+                        <h3>Foot Care</h3>
+                        <p>Visit us today and start shopping!</p>
+                        <div class="star">
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </div>
+                        <h5>$5.60 <strike>$10.50</strike> <span></span></h5>
+                        <button onclick="addToCart('Foot Care', 5.60, './image/c5.webp')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./image/c6.jpeg" alt="">
+                    <div class="card-body">
+                        <h3>Lipsticks</h3>
+                        <p>Visit us today and start shopping!</p>
+                        <div class="star">
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </div>
+                        <h5>$2.30 <strike>$5</strike> <span></span></h5>
+                        <button onclick="addToCart('Lipsticks', 2.30, './image/c6.jpeg')">Order Now</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./image/c7.jfif" alt="">
+                    <div class="card-body">
+                        <h3>Eyebrow products</h3>
+                        <p>Visit us today and start shopping!</p>
+                        <div class="star">
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </div>
+                        <h5>$3.2 <strike>$5.60</strike> <span></span></h5>
+                        <button onclick="addToCart('Eyebrow products', 3.2, './image/c7.jfif')">Order Now</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <img src="./image/c8.webp">
+                    <div class="card-body">
+                        <h3>Body Lotions</h3>
+                        <p>Visit us today and start shopping!</p>
+                        <div class="star">
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                            <i class="fas fa-star checked"></i>
+                        </div>
+                        <h5>$10.50 <strike>$15.60</strike> <span></span></h5>
+                        <button onclick="addToCart('Body Lotions', 10.50, './image/c8.webp')">Order Now</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="clothe.html" id="viewmorebtn">View More</a>
+    </div>
+    <!-- product cards -->
+
+    <!-- product -->
+    <div class="container" style="margin-top: 100px;">
+    <hr>
+</div>
+<div class="container">
+    <h3 style="font-weight: bold;">PRODUCT.</h3>
+    <p>Discover the perfect blend of nature and luxury with our cosmetics range. Each product is carefully crafted using premium, ethically sourced ingredients that nourish your skin while enhancing your natural beauty. Whether you're looking for vibrant colors, flawless coverage, or soothing skincare, our collection offers everything you need to look and feel your best, every day.</p>
+
+    <hr>
+</div>
+    <!-- product -->
+
+
+<!-- offer -->
+    <div class="container" id="offer">
+        <div class="row">
+            <div class="col-md-4 py-3 py-md-0">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h5>Free Shipping</h5>
+                <p>On order over $100</p>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <i class="fa-solid fa-truck"></i>
+                <h5>Fast Delivery</h5>
+                <p>World wide</p>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <h5>Big Choice</h5>
+                <p>Of product</p>
+            </div>
+        </div>
+    </div>
+<!-- offer -->
+
+
+
+
+
+
+<!-- footer -->
+<footer id="footer" style="margin-top: 50px;">
+<div class="footer-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 footer-content">
+                <h3>Radiant Naturals</h3>
+                <p>Empower Your Natural Beauty with Cruelty-Free, Vegan Cosmetics</p>
+                <p>
+                    Badulla <br>
+                    Colombo <br>
+                    Kandy <br>
+                </p>
+                <strong><i class="fas fa-phone"></i> Phone: <strong>011 0245689</strong></strong><br>
+                <strong><i class="fa-solid fa-envelope"></i> Email: <strong>cosmetics@gmail.com</strong></strong>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Usefull Links</h4>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Privacy policay</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <p>Shop our massive selection of designer and trendyat unbeatable prices</p>
+                <ul>
+                    <li><a href="#">Free Shipping</a></li>
+                    <li><a href="#">Fast Delivery</a></li>
+                    <li><a href="#">Big Choice</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Social Network</h4>
+                <p>Follow us on social media for updates</p>
+                <div class="socail-links mt-3">
+                    <a href="#" class="twiiter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="twiiter"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="twiiter"><i class="fa-brands fa-google-plus"></i></a>
+                    <a href="#" class="twiiter"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="twiiter"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container py-4">
+    <div class="copyright">
+        &copy; Copyright <strong>Radiant Naturals</strong>.All Rights Reserved
+    </div>
+    <div class="credits">
+        Designed By <a href="#">Radiant Naturals</a>
+    </div>
+</div>
+</footer>
+<!-- footer -->
+
+<a href="#" class="arrow"><i><img src="./image/up-arrow.png" alt="" width="50px"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function addToCart(product, price, image) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let itemIndex = cartItems.findIndex(item => item.product === product);
+
+            if (itemIndex > -1) {
+                cartItems[itemIndex].quantity += 1;
+            } else {
+                cartItems.push({ product: product, price: price, quantity: 1, image: image });
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            alert(product + " has been added to your cart!");
+        }
+    </script>
+</body>
+</html>

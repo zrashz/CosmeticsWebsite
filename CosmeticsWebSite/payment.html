@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment </title>
+
+    <!-- css links -->
+    
+    <link rel="stylesheet" href="payment.css">
+
+
+
+    <!--icon remix cdn added-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css" integrity="sha512-GL7EM8Lf8kU23I3kTio2kRWt8YRDVIQcSZjRVtVRfk05kB/QvkyafuTC94Ev0X6qk7Z0r5s06c1lsP1p/ezDYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--navbar section start-->
+    <div class="navbar-container">
+        <nav class="navbar">
+            <div>
+                <div class="brand-name">
+                    <!-- <img src="" alt=""> -->
+                    <a href="index.html">
+                    
+                        
+                    </p></a>
+                </div>
+            </div>
+            
+            </div>
+            <div class="responsive-sm">
+                <ul>
+                    <li><a href="index.html" class="sm-icon"><i class="ri-home-7-fill"></i></a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--navbar section end-->
+
+    
+    <!--payment section start-->
+        <div class="payment-section">
+        <div class="payment-title">
+            <h2>Secure Payment</h2>
+        </div>
+            
+        
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                <form name="paymentForm" action="" method="post" onsubmit="payment();return false">
+                
+                    <div class="row">
+                    <div class="col-50">
+                        <h3 class="billing">Billing Address</h3>
+                        <label for="fname"><i class="ri-user-fill"></i> Full Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+                        <label for="email"><i class="ri-mail-fill"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="john@example.com">
+                        <label for="adr"><i class="ri-map-pin-fill"></i> Address</label required>
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                        <label for="city"><i class="ri-building-fill"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="New York" required>
+
+                        <div class="row">
+                        <div class="col-50">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" placeholder="NY" required>
+                        </div>
+                        <div class="col-50">
+                            <label for="zip">Zip</label>
+                            <input type="text" id="zip" name="zip" placeholder="10001" required>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-50">
+                        <h3 class="billing">Payment</h3>
+                        <label for="fname">Accepted Cards</label>
+                        <div class="icon-container">
+                        <i class="ri-visa-fill" style="color:navy;"></i>
+                        <i class="ri-mastercard-line"  style="color:red;"></i>
+                        
+                        </div>
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+                        <label for="ccnum">Credit card number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+                        <div class="row">
+                        <div class="col-50">
+                            <label for="expyear">Exp Year</label>
+                            <input type="text" id="expyear" name="expyear" placeholder="2018" required>
+                        </div>
+                        <div class="col-50">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="352" required>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <label>
+                    <input type="checkbox" checked="checked" name="shipping" required> Shipping address same as billing
+                    </label>
+                    <input type="submit" value="Continue to checkout" class="btn" >
+                </form>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+    
+
+    <!--payment section end-->
+    
+    <footer>
+        <div class="all-footer">
+            <div class="company-footer">
+                <h1>Radiant Naturals
+                </h1>
+                <p>Don't Miss Out!</p>
+            </div>
+            <hr>
+            <div class="footer">
+                <p>Copyright &copy; Fashion | Designed by Radiant Naturals
+                </p>
+            </div>
+        </div>
+        
+    </footer>
+    <!--footer section end-->
+
+    <script src="index.js"></script>
+
+</body>
+</html>
